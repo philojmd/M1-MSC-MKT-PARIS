@@ -1,0 +1,26 @@
+.LB{
+  text-align: center;
+  font-family: 'Open Sans', sans-serif;
+  color: #339966;
+}
+
+.LB button {
+  height: 100px;
+  width: 30px;
+  font-weight: bold;
+  text-align: center;
+  background-color: #339966;
+  border-radius: 10px;
+}
+.LB img {
+  border-radius: 10px;
+}
+
+.LB ul {
+  list-style: none;
+  padding: 0;
+}
+.LB li {
+  display: inline;
+  vertical-align: middle;
+}

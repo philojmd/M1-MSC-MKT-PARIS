@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <link rel="stylesheet" href="styles.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mes 3 destinations favorites en France</title>
+  <script src="https://kit.fontawesome.com/1b14d77205.js" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="styles/styles.css">
+</head>
+<body>
+
+  <div class="banner">
+    <h1><strong>Mes 3 destinations favorites en France</strong></h1>
+  </div>
+
+<!-- création d'un bandeau de navigation -->
+
+  <nav>
+    <ul class="menu">
+      <a href="#La Baule">La Baule</a>
+      <a href="#Bourges">Bourges</a>
+      <a href="#Paris">Paris</a>
+    </ul>
+  </nav>
+
+<!-- 1er espace  -->
+
+<div class="LB">
+  <h2 id="LaBaule">La Baule</h2>
+  <ul class="diapo">
+      <li>
+        <button type="button" onclick="movegauche();"><</button>
+      </li>
+      <li>
+        <img id="couche" src="lb1.jpg" alt="couché de soleil" width="375" height="500"></img>
+      </li>
+      <li>
+        <button type="button" onclick="movedroite();">></button>
+      </li>
+  </ul>
+  <script>
+    function movedroite(){
+      var element=document.getElementById('couche')
+      if (element.src.match("lb1.jpg"))
+      {
+        element.src="lb2.jpg"
+      }
+      else if (element.src.match("lb2.jpg"))
+      {
+        element.src="lb3.jpg"
+      }
+      else if (element.src.match("lb3.jpg"))
+      {
+        element.src="lb1.jpg"
+      }
+    }
+    function movegauche(){
+      var element=document.getElementById('couche')
+      if (element.src.match("lb1.jpg"))
+      {
+        element.src="lb3.jpg"
+      }
+      else if (element.src.match("lb3.jpg"))
+      {
+        element.src="lb2.jpg"
+      }
+      else if (element.src.match("lb2.jpg"))
+      {
+        element.src="lb1.jpg"
+      }
+    }
+  </script>
+</div>
+
+<!-- 2eme espace  -->
+
+  <div class="container">
+    <h2 id="Bourges">Bourges</h2>
+    <div class="cards">
+      <div class="card">
+          <img src="bourges1.jpg" alt="picture of girl">
+          <h3>Campagne</h3>
+          <p>Se promener à l'air libre</p>
+      </div>
+
+      <div class="card">
+          <img src="bourges2.jpg" alt="family picture">
+          <h3>Famille</h3>
+      </div>
+
+      <div class="card">
+          <img src="bourges3.jpg" alt="friends picture">
+          <h3>Amis</h3>
+      </div>
+    </div>
+  </div>
+
+
+<!-- 3eme espace  -->
+
+  <div class="cards2">
+    <h2 id="Paris">Paris</h2>
+    <ul class="list-inline">
+      <li>
+        <a href="#">
+          <i class="fa-solid fa-monument"></i>
+        </a>
+      </li>
+      <li>
+        <a href="#">
+          <i class="fa-solid fa-address-book"></i>
+        </a>
+      </li>
+      <li>
+        <a href="#">
+          <i class="fa-solid fa-briefcase"></i>
+        </a>
+      </li>
+    </ul>
+  </div>
+
+
+<!-- fin/footer  -->
+
+  <div class="footer">
+    <p>Fait par Philomène Joumard avec l'aide du Wagon </p>
+  </div>
+
+</body>
+</html>
